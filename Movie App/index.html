@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie App</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="container">
+        <div class="header__content">
+            <a href="index.html" class="header__logo">Movie App</a>
+        </div>
+        <div class="searcher">
+            <form>
+                <input type="text" class="header__search" placeholder="Поиск">
+                </form>
+                <nav class="three invisible_button">
+                    <ul class="topmenu">
+                      <li><a href="#">Сортировать по<i class="fa fa-angle-down"></i></a>
+                        <ul class="submenu">
+                          <li><button name="sort" onclick="sortBy(1)">Рейтингу</a></li>
+                          <li><button name="sort" onclick="sortBy(2)">Кол-ву голосов</a></li>
+                            <li><button name="sort" onclick="sortBy(3)">Дате выхода</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+        </div>
+        <div class="flip__page">
+            <button name="flip_page" class="previousPage" onclick="changePage(-1)">Предыдущая</button>
+            <button name="flip_page" class="nextPage" onclick="changePage(1)">Следующая</button>
+        </div>
+        <div class="flip_searched_page invisible_button">
+            <button disabled name="flip_searched_page" class="previousPage" id="sButton" onclick="changeSearchedPage(-1)">Предыдущая</button>
+            <button disabled name="flip_searched_page" class="nextPage" id="sButton2" onclick="changeSearchedPage(1)">Следующая</button>
+        </div>
+        <div class="moviesAmount"></div>
+    </header>
+    <div class="container">
+        <div class="movies">
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
